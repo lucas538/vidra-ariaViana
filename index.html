@@ -882,9 +882,11 @@
 
         .map-placeholder {
             background: #333;
+            height: 200px;
             border-radius: 10px;
-            overflow: hidden;
-            line-height: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .copyright {
@@ -919,37 +921,14 @@
             transform: scale(1.2) rotate(10deg);
         }
 
-        .instagram-float {
-            position: fixed;
-            bottom: 95px;
-            /* Above WhatsApp */
-            right: 20px;
-            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-            color: #fff;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(214, 36, 159, 0.4);
-            z-index: 999;
-            transition: var(--transition);
-            animation: float-bounce 3s ease-in-out infinite;
-        }
-
         .instagram-float:hover {
             transform: scale(1.2) rotate(-10deg);
         }
 
         @keyframes float-bounce {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0);
             }
-
             50% {
                 transform: translateY(-10px);
             }
@@ -1012,18 +991,6 @@
         .carousel-prev:active,
         .carousel-next:active {
             transform: translateY(-50%) scale(0.95);
-        }
-
-        /* Scroll Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(35px);
-            transition: opacity 0.65s ease, transform 0.65s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         /* Responsive */
@@ -1103,8 +1070,7 @@
     <header>
         <div class="container">
             <a href="#inicio" class="logo">
-                <img src="logo v.jpeg" alt="Logo Vidraçaria Viana" class="nav-logo" loading="lazy" width="50"
-                    height="50">
+                <img src="logo v.jpeg" alt="Logo Vidraçaria Viana" class="nav-logo" loading="lazy" width="50" height="50">
                 Vidraçaria <span>Viana</span>
             </a>
             <nav>
@@ -1128,13 +1094,13 @@
                 <p>Há mais de 10 anos transformando espaços com elegância e sofisticação. Soluções modernas em vidro
                     para sua casa ou empresa.</p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/5517991466913?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
-                        target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-beam">Solicitar Orçamento</a>
+                    <a href="https://wa.me/5517991466913?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank"
+                        class="btn btn-primary btn-beam">Solicitar Orçamento</a>
                     <a href="#servicos" class="btn btn-outline">Nossos Serviços</a>
                 </div>
             </div>
             <div class="hero-image-container">
-                <img src="escada_guarda_corpo.png" alt="Guarda-corpo de vidro em escada moderna"
+                <img src="assets/foto main.jpeg" alt="Guarda-corpo de vidro em escada moderna"
                     class="hero-staircase-img" loading="lazy" width="420" height="420">
             </div>
         </div>
@@ -1144,7 +1110,7 @@
         <div class="container">
             <h2 class="section-title">Nossos <span>Serviços</span></h2>
             <div class="services-grid">
-                <div class="service-card">
+                                <div class="service-card">
                     <i class="fas fa-shower"></i>
                     <h3>Box para Banheiro</h3>
                     <p>Vidros temperados com acabamento premium e segurança.</p>
@@ -1250,8 +1216,7 @@
                     <a href="#contato" class="btn btn-primary">Entre em Contato</a>
                 </div>
                 <div class="about-image">
-                    <img src="logo v.jpeg" alt="Logo Vidraçaria Viana" class="about-logo-img" loading="lazy" width="350"
-                        height="350">
+                    <img src="logo v.jpeg" alt="Logo Vidraçaria Viana" class="about-logo-img" loading="lazy" width="350" height="350">
                 </div>
             </div>
         </div>
@@ -1266,7 +1231,7 @@
                     <p>Projetos Realizados</p>
                 </div>
                 <div class="stat-item">
-                    <div class="number" data-target="10" data-suffix="+">0+</div>
+                    <div class="number" data-target="25" data-suffix="+">0+</div>
                     <p>Anos de Experiência</p>
                 </div>
                 <div class="stat-item">
@@ -1314,8 +1279,7 @@
                     </div>
                     <div class="form-group">
                         <label for="mensagem">Observações</label>
-                        <textarea id="mensagem" name="mensagem"
-                            placeholder="Descreva medidas, local da instalação ou outras informações..."></textarea>
+                        <textarea id="mensagem" name="mensagem" placeholder="Descreva medidas, local da instalação ou outras informações..."></textarea>
                     </div>
                     <button type="submit" class="btn-submit">Enviar Orçamento</button>
                 </form>
@@ -1356,17 +1320,16 @@
                 <div class="faq-item">
                     <div class="faq-question">Quanto tempo leva para instalar um box? <i
                             class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">Boxes com altura padrão costumam ser instalados em até 2 a 4 dias úteis.
-                    </div>
+                    <div class="faq-answer">Em média, 2 a 4 horas dependendo do modelo e acabamento.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Vocês atendem em quais regiões? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">Atendemos São José do Rio Preto e região, em um raio de até 100 km.
+                    <div class="faq-answer">Atendemos toda a região metropolitana e cidades vizinhas mediante consulta.
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Qual a garantia dos serviços? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A Vidraçaria Viana oferece até 6 meses de garantia em seus serviços.</div>
+                    <div class="faq-answer">Oferecemos 5 anos de garantia em todos os serviços realizados.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Vocês fazem orçamento presencial? <i class="fas fa-chevron-down"></i>
@@ -1376,16 +1339,14 @@
                 <div class="faq-item">
                     <div class="faq-question">Quais tipos de vidro vocês trabalham? <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="faq-answer">Trabalhamos com vidro temperado, laminado, espelhado, comum, insulado
-                        (duplo) e
+                    <div class="faq-answer">Trabalhamos com vidro temperado, laminado, espelhado, comum, insulado (duplo) e
                         modelos especiais para box, fachadas, sacadas, portas, janelas e projetos sob medida.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Vocês realizam manutenção e troca de vidros? <i
-                            class="fas fa-chevron-down"></i>
+                    <div class="faq-question">Vocês realizam manutenção e troca de vidros? <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="faq-answer">Realizamos troca de vidros. Manutenções são feitas apenas em portas
-                        automatizadas instaladas por nós.</div>
+                    <div class="faq-answer">Sim. Realizamos manutenção, ajustes, substituição de vidros quebrados ou
+                        danificados e troca de ferragens em box, portas, janelas e outros sistemas em vidro.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">É necessário agendar visita técnica? <i class="fas fa-chevron-down"></i>
@@ -1395,8 +1356,7 @@
                 <div class="faq-item">
                     <div class="faq-question">Qual a diferença entre vidro temperado e laminado? <i
                             class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">O vidro temperado passa por aquecimento e resfriamento, ficando mais
-                        resistente
+                    <div class="faq-answer">O vidro temperado passa por aquecimento e resfriamento, ficando mais resistente
                         e, em caso de quebra, se fragmenta em pequenos pedaços. O laminado é formado por duas ou mais
                         lâminas unidas por película (PVB), oferecendo maior segurança: mesmo quebre, tende a permanecer
                         no lugar, reduzindo riscos de acidentes.</div>
@@ -1411,20 +1371,20 @@
                 <h3>Vidraçaria Viana</h3>
                 <p><i class="fas fa-map-marker-alt"></i> Av. Dr. Antônio Marques dos Santos, 1406 - Jardim Seyon, São
                     José do Rio Preto - SP, 15050-500, Brazil</p>
-                <p><i class="fas fa-phone"></i> (17) 99146-6913</p>
+                <p><i class="fas fa-phone"></i>  (17) 99146-6913</p>
                 <p><i class="fas fa-envelope"></i> contato@vidracariaviana.com.br</p>
             </div>
             <div>
                 <h3>Horário de Atendimento</h3>
                 <p>Seg-Sex: 07:30h - 18h</p>
-
+                
             </div>
             <div>
                 <h3>Siga-nos</h3>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/vidracariaviana" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/vidracariavianaa?igsh=Nzlpazdhcm9uc3Jw" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/5517991466913?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div>
@@ -1438,16 +1398,16 @@
             </div>
         </div>
         <div class="copyright">
-            &copy; 2025 Vidraçaria Viana - Todos os direitos reservados.
+            &copy; 2024 Vidraçaria Viana - Todos os direitos reservados.
         </div>
     </footer>
 
-    <a href="https://wa.me/5517991466913?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20serviços."
-        target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+    <a href="https://wa.me/5517991466913?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20serviços." target="_blank"
+        class="whatsapp-float" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <a href="https://www.instagram.com/vidracariavianaa?igsh=Nzlpazdhcm9uc3Jw" target="_blank" rel="noopener noreferrer" class="instagram-float"
+    <a href="https://www.instagram.com/vidracariavianaa?igsh=Nzlpazdhcm9uc3Jw" target="_blank" class="instagram-float"
         aria-label="Instagram">
         <i class="fab fa-instagram"></i>
     </a>
@@ -1528,24 +1488,17 @@
 
         statsObserver.observe(statsGrid);
 
-        // Dark Mode Toggle (com persistência)
+        // Dark Mode Toggle
         const themeToggle = document.getElementById('themeToggle');
-        const savedTheme = localStorage.getItem('viana-theme');
-        if (savedTheme === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        }
         themeToggle.addEventListener('click', () => {
             const html = document.documentElement;
             const current = html.getAttribute('data-theme');
             if (current === 'dark') {
                 html.removeAttribute('data-theme');
                 themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-                localStorage.setItem('viana-theme', 'light');
             } else {
                 html.setAttribute('data-theme', 'dark');
                 themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-                localStorage.setItem('viana-theme', 'dark');
             }
         });
 
@@ -1554,14 +1507,6 @@
         const navUl = document.querySelector('nav ul');
         menuToggle.addEventListener('click', () => {
             navUl.classList.toggle('open');
-        });
-        // Fecha menu ao clicar em qualquer link de navegação
-        navUl.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => navUl.classList.remove('open'));
-        });
-        // Fecha menu ao redimensionar para desktop
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) navUl.classList.remove('open');
         });
 
         // Formulário de orçamento → WhatsApp
@@ -1823,7 +1768,7 @@
                         modalHero.classList.add('hidden');
 
                         const carouselImages = document.getElementById('carouselImages');
-
+                        
                         // Carregar as imagens corretas para cada serviço
                         if (titleText === 'Box para Banheiro') {
                             carouselImages.innerHTML = `
@@ -1858,7 +1803,7 @@
                                 <img src="assets/janela aut 2.jpg" alt="Janela Automatizada" class="carousel-img">
                             `;
                         }
-
+                        
                         // Reinicializar o carousel
                         initCarousel();
                     } else {
@@ -1874,16 +1819,14 @@
 
         const closeServiceModal = () => {
             serviceModal.classList.remove('active');
-            serviceCards.forEach(c => c.classList.remove('active'));
         };
 
         closeModal.addEventListener('click', closeServiceModal);
         modalCloseBtn.addEventListener('click', closeServiceModal);
         serviceModal.addEventListener('click', (e) => {
-            if (e.target === serviceModal) closeServiceModal();
-        });
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeServiceModal();
+            if (e.target === serviceModal) {
+                closeServiceModal();
+            }
         });
 
         // CTA do Modal para o Formulário de Orçamento
@@ -1908,76 +1851,106 @@
             }
         });
 
-        // Carousel com Drag — event listeners globais únicos (sem memory leak)
-        let _drag = null;
-
-        document.addEventListener('mousemove', (e) => {
-            if (!_drag) return;
-            const diff = e.clientX - _drag.startX;
-            const offsetPercent = (diff / _drag.container.offsetWidth) * 100;
-            _drag.el.style.transform = `translateX(${-_drag.index * 100 + offsetPercent}%)`;
-        });
-
-        document.addEventListener('mouseup', (e) => {
-            if (!_drag) return;
-            const drag = _drag;
-            _drag = null;
-            const diff = e.clientX - drag.startX;
-            if (diff > 50) drag.update(drag.index - 1 < 0 ? drag.total - 1 : drag.index - 1);
-            else if (diff < -50) drag.update((drag.index + 1) % drag.total);
-            else drag.update(drag.index);
-        });
-
+        // Carousel com Drag (Arrastar)
         function initCarousel() {
-            document.querySelectorAll('.carousel-container').forEach(container => {
+            const carouselContainers = document.querySelectorAll('.carousel-container');
+            carouselContainers.forEach(container => {
                 const imagesContainer = container.querySelector('.carousel-images');
+                const images = container.querySelectorAll('.carousel-img');
                 const prevBtn = container.querySelector('.carousel-prev');
                 const nextBtn = container.querySelector('.carousel-next');
                 let currentIndex = 0;
-
-                const getImages = () => container.querySelectorAll('.carousel-img');
+                let startX = 0;
+                let isDragging = false;
 
                 const updateCarousel = (newIndex) => {
-                    imagesContainer.style.transform = `translateX(${-newIndex * 100}%)`;
+                    const offset = -newIndex * 100;
+                    imagesContainer.style.transform = `translateX(${offset}%)`;
                     imagesContainer.style.transition = 'transform 0.3s ease';
                     currentIndex = newIndex;
-                    if (_drag && _drag.el === imagesContainer) _drag.index = newIndex;
                 };
 
-                // Usa .onclick para substituir listeners anteriores sem acumular
-                if (prevBtn) prevBtn.onclick = () => {
-                    const imgs = getImages();
-                    updateCarousel(currentIndex - 1 < 0 ? imgs.length - 1 : currentIndex - 1);
-                };
-                if (nextBtn) nextBtn.onclick = () => {
-                    updateCarousel((currentIndex + 1) % getImages().length);
-                };
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', () => {
+                        let newIndex = currentIndex - 1;
+                        if (newIndex < 0) newIndex = images.length - 1;
+                        updateCarousel(newIndex);
+                    });
+                }
 
-                imagesContainer.onmousedown = (e) => {
-                    _drag = { el: imagesContainer, container, index: currentIndex, startX: e.clientX, total: getImages().length, update: updateCarousel };
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', () => {
+                        let newIndex = (currentIndex + 1) % images.length;
+                        updateCarousel(newIndex);
+                    });
+                }
+
+                imagesContainer.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    startX = e.clientX;
                     imagesContainer.style.transition = 'none';
-                };
+                });
 
-                imagesContainer.ontouchstart = (e) => {
-                    _drag = { el: imagesContainer, container, index: currentIndex, startX: e.touches[0].clientX, total: getImages().length, update: updateCarousel };
+                document.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+                    const currentX = e.clientX;
+                    const diff = currentX - startX;
+                    const offsetPercent = (diff / container.offsetWidth) * 100;
+                    const totalOffset = -currentIndex * 100 + offsetPercent;
+                    imagesContainer.style.transform = `translateX(${totalOffset}%)`;
+                });
+
+                document.addEventListener('mouseup', (e) => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    const endX = e.clientX;
+                    const diff = endX - startX;
+                    const threshold = 50;
+
+                    if (diff > threshold) {
+                        let newIndex = currentIndex - 1;
+                        if (newIndex < 0) newIndex = images.length - 1;
+                        updateCarousel(newIndex);
+                    } else if (diff < -threshold) {
+                        let newIndex = (currentIndex + 1) % images.length;
+                        updateCarousel(newIndex);
+                    } else {
+                        updateCarousel(currentIndex);
+                    }
+                });
+
+                imagesContainer.addEventListener('touchstart', (e) => {
+                    isDragging = true;
+                    startX = e.touches[0].clientX;
                     imagesContainer.style.transition = 'none';
-                };
+                });
 
-                imagesContainer.ontouchmove = (e) => {
-                    if (!_drag || _drag.el !== imagesContainer) return;
-                    const diff = e.touches[0].clientX - _drag.startX;
-                    imagesContainer.style.transform = `translateX(${-currentIndex * 100 + (diff / container.offsetWidth) * 100}%)`;
-                };
+                imagesContainer.addEventListener('touchmove', (e) => {
+                    if (!isDragging) return;
+                    const currentX = e.touches[0].clientX;
+                    const diff = currentX - startX;
+                    const offsetPercent = (diff / container.offsetWidth) * 100;
+                    const totalOffset = -currentIndex * 100 + offsetPercent;
+                    imagesContainer.style.transform = `translateX(${totalOffset}%)`;
+                });
 
-                imagesContainer.ontouchend = (e) => {
-                    if (!_drag || _drag.el !== imagesContainer) return;
-                    const drag = _drag;
-                    _drag = null;
-                    const diff = e.changedTouches[0].clientX - drag.startX;
-                    if (diff > 50) drag.update(drag.index - 1 < 0 ? drag.total - 1 : drag.index - 1);
-                    else if (diff < -50) drag.update((drag.index + 1) % drag.total);
-                    else drag.update(drag.index);
-                };
+                imagesContainer.addEventListener('touchend', (e) => {
+                    isDragging = false;
+                    const endX = e.changedTouches[0].clientX;
+                    const diff = endX - startX;
+                    const threshold = 50;
+
+                    if (diff > threshold) {
+                        let newIndex = currentIndex - 1;
+                        if (newIndex < 0) newIndex = images.length - 1;
+                        updateCarousel(newIndex);
+                    } else if (diff < -threshold) {
+                        let newIndex = (currentIndex + 1) % images.length;
+                        updateCarousel(newIndex);
+                    } else {
+                        updateCarousel(currentIndex);
+                    }
+                });
 
                 imagesContainer.style.display = 'flex';
             });
